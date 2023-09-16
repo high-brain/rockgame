@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Game-BB</title>
+    <link rel="icon" href="/image/paper.png">
+    <meta name="description" content="Enjoy Rock, Paper and Scissors game here">
+   <link rel="stylesheet" href="./rock.css">
+     <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1949579388249186"
+    crossorigin="anonymous">
+   </script>-->
+</head>
+<body>
+<p class="title">
+   Rock Paper Scissors
+</p>
+
+ <button class="move-btn" onclick="
+   playGame('rock');
+ "><img src="/image/rock.png" class="move-icon"></button>
+  
+
+<button class="move-btn" onclick="
+   playGame('paper');
+"><img class="move-icon" src="/image/paper.png"></button>
+  
+<button class="move-btn" onclick="
+  playGame('scissors');
+"><img src="/image/scissors.png" class="move-icon"></button>
+
+<p class="js-result  result"></p>
+
+<p class="js-moves"></p>
+
+<p class="js-score score"></p>
+
+<button class="Reset-Score-btn" onclick="
+   score.wins = 0;
+   score.losses = 0;
+   score.ties = 0;
+   localStorage.removeItem('score');  
+   updateScoreElement();
+">Reset Score</button>
+
+<button class="auto-play-button js-button" onclick="
+   autoPlay(); autoPlay2();
+">Auto Play</button>
+
+<script src="/rock.js"></script>
+
+<footer 
+   style="margin-top: 60px;
+   color: blue;
+   text-align: center;">design by BERNARD BRAIN &copy;
+</footer>
+</body>
+</html>
